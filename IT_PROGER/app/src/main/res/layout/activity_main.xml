@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/upper_bg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#46bee6">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/pixelify_sans"
+            android:text="Привет, Админ"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/pixelify_sans"
+            android:text="Ваш личный кабинет"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/user_name_field"
+        android:layout_width="311dp"
+        android:layout_height="56dp"
+        android:layout_below="@id/main_box"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="Введите имя"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/user_bio_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_name_field"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="50dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Введите биографию"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_bio_field"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#46bee6"
+        android:fontFamily="@font/pixelify_sans"
+        android:onClick="saveData"
+        android:text="Сохранить"
+        app:cornerRadius="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_bio_field"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="#46bee6"
+        android:fontFamily="@font/pixelify_sans"
+        android:onClick="getData"
+        android:text="Загрузить"
+        app:cornerRadius="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/main_box"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/upper_bg"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="-80dp"
+        android:background="@color/white">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#46bee6"
+            android:fontFamily="@font/pixelify_sans"
+            android:text="Личный кабинет"
+            app:cornerRadius="10dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#46bee6"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20sp"
+            android:backgroundTint="@color/red"
+            android:fontFamily="@font/pixelify_sans"
+            android:text="Главная"
+            app:cornerRadius="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:backgroundTint="@color/red"
+            android:fontFamily="@font/pixelify_sans"
+            android:onClick="goContacts"
+            android:text="Контакты"
+            app:cornerRadius="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20sp"
+            android:backgroundTint="@color/red"
+            android:fontFamily="@font/pixelify_sans"
+            android:onClick="goWeb"
+            android:text="Блог"
+            app:cornerRadius="10dp" />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
